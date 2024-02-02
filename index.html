@@ -666,14 +666,101 @@ End Sub
 
       </code>
     </pre>
-    <h2>5ის ჯერადი პირველი n ნატურალური რიცხვის ჯამი/ნამრავლის კოდი</h2>
-    <p>პირობა</p>
-    <p>
-      for ციკლის გამოყენებით შეადგინეთ 5-ის ჯერადი პირველი n ნატურალური რიცხვის
-      ნამრავლისა და ჯამის გამოთვლის პროგრამა.
-    </p>
+    <div>
+      <h2>მოცემული მთელი რიცხვების ჯამის კოდი</h2>
+      <p>პირობა</p>
+      <p>
+        შეადგინეთ პროგრამა, რომელიც იპოვის მოცემული მთელი რიცხვის ციფრების ჯამს.
+      </p>
 
-    <pre>
+      <pre>
+      <code>
+Private Sub CommandButton1_Click()
+    Dim digit As Integer
+    Dim total As Long
+    Dim number As Long
+    
+    number = Abs(Cells(3, 2))
+
+    Do While number > 0
+
+        digit = number Mod 10
+        
+        total = total + digit
+        
+        number = number \ 10
+    Loop
+    
+    Cells(4, 2) = total
+End Sub
+    </code>
+    </pre>
+    </div>
+    <div>
+      <h2>B ასოს დათვლის კოდი</h2>
+      <p>პირობა</p>
+      <p>
+        Bშეადგინეთ პროგრამა, რომელიც Word-ის დოკუმენტში დაითვლის „BbbbBB“
+        სიმბოლოს რაოდენობას.
+      </p>
+
+      <pre>
+      <code>
+
+Public Sub countOfBs()
+    Dim text As String, count As Integer
+    count = 0
+    text = Cells(1, 3).Value
+   
+    
+    For i = 1 To Len(text)
+        If Mid(text, i, 1) = "B" Or Mid(text, i, 1) = "b" Then
+            count = count + 1
+        End If
+        
+    Next i
+    
+    Cells(2, 2).Value = count
+End Sub
+      </code>
+    </pre>
+    </div>
+    <div>
+      <h2>რიცხვების გამოტანა და კენტი/ლუწის დაჯამების კოდი</h2>
+      <p>პირობა</p>
+      <p>
+        შეადგინეთ პროგრამა, რომელიც EXCELL-ის სამუშაო ფურცელზე გამოიტანს 1-დან
+        100-მდე კენტ რიცხვებს და მათ ჯამს.
+      </p>
+      <p>ღილაკზე ვაბამთ კოდს</p>
+
+      <pre>
+      <code>
+  Private Sub sumOfOdds_Click()
+Dim sum As Integer, n As Integer
+sum = 0
+n = 3
+For i = 1 To 100 Step 2
+    Cells(n, 1) = i
+    sum = sum + i
+    n = n + 1
+Next i
+
+Cells(2, 2) = sum
+End Sub
+
+      </code>
+    </pre>
+    </div>
+    <div>
+      <h2>5ის ჯერადი პირველი n ნატურალური რიცხვის ჯამი/ნამრავლის კოდი</h2>
+      <p>პირობა</p>
+      <p>
+        for ციკლის გამოყენებით შეადგინეთ 5-ის ჯერადი პირველი n ნატურალური
+        რიცხვის ნამრავლისა და ჯამის გამოთვლის პროგრამა.
+      </p>
+
+      <pre>
       <code>
 Public Sub getSum()
 Dim n As Integer, sum As Integer, num As Integer, namravli As Long
@@ -694,5 +781,66 @@ Cells(4, 2).Value = namravli
 End Sub
       </code>
     </pre>
+    </div>
+    <div>
+      <h2>5ის ჯერადი პირველი n ნატურალური რიცხვის ჯამი/ნამრავლის კოდი</h2>
+      <p>პირობა</p>
+      <p>
+        for ციკლის გამოყენებით შეადგინეთ 5-ის ჯერადი პირველი n ნატურალური
+        რიცხვის ნამრავლისა და ჯამის გამოთვლის პროგრამა.
+      </p>
+
+      <pre>
+      <code>
+Public Sub getSum()
+Dim n As Integer, sum As Integer, num As Integer, namravli As Long
+
+n = Cells(2, 2).Value
+num = 0
+namravli = 1
+sum = 0
+
+For i = 1 To n
+    num = num + 5
+    namravli = namravli * num
+    sum = sum + num
+Next
+
+Cells(3, 2).Value = sum
+Cells(4, 2).Value = namravli
+End Sub
+      </code>
+    </pre>
+    </div>
+    <div>
+      <h2>5ის ჯერადი პირველი n ნატურალური რიცხვის ჯამი/ნამრავლის კოდი</h2>
+      <p>პირობა</p>
+      <p>
+        for ციკლის გამოყენებით შეადგინეთ 5-ის ჯერადი პირველი n ნატურალური
+        რიცხვის ნამრავლისა და ჯამის გამოთვლის პროგრამა.
+      </p>
+
+      <pre>
+      <code>
+Public Sub getSum()
+Dim n As Integer, sum As Integer, num As Integer, namravli As Long
+
+n = Cells(2, 2).Value
+num = 0
+namravli = 1
+sum = 0
+
+For i = 1 To n
+    num = num + 5
+    namravli = namravli * num
+    sum = sum + num
+Next
+
+Cells(3, 2).Value = sum
+Cells(4, 2).Value = namravli
+End Sub
+      </code>
+    </pre>
+    </div>
   </body>
 </html>
